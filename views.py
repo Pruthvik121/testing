@@ -9,7 +9,6 @@ import time
 from forms import LoginForm, RegistrationForm, CustomizeForm
 import tweepy
 import json
-import cv2
 from datetime import datetime
 import logging
 from PIL import Image, ImageFilter
