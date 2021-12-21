@@ -16,8 +16,8 @@ login.login_view = 'login'
 app.config['SECRET_KEY'] = "Everything will repeat"
 app.config['UPLOAD_PATH'] = 'media/'
 app.config['DEBUG'] = True	
-api_key = "kxNP9B8P5PoqTddS9bKkhQADd"
-api_sec_key = "Asv6TgPPc5ONl6saKm8aAz9aIC4sKoVCEeJvBbUFUZKXTMlVbM"
+api_key = "v6e8uiwvUJM5kW9PhNqdRnis9"
+api_sec_key = "vrqxprAvrmFaueoqA8k34UI9XKfPUzT1m2U6lXzHoLhpdx5tVO"
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///chat_bot.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
