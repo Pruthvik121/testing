@@ -401,20 +401,19 @@ def home():
 		auth.set_access_token(user.acc_token,user.acc_secret)
 		api = tweepy.API(auth,wait_on_rate_limit=True)
 		user_obj = api.me()
-		t = 2
 		tweets = tweepy.Cursor(api.search,
 			q=request.form['fname'],
 			lang="en").items(5)
 		for t2 in tweets:
 			
 			t1 = tweet(tweets_text = t2.text,author_screenname= t2.author.screen_name, author_id = t2.author.id, tweets_id = t2.id)
-			time.sleep(t)
+			#time.sleep(t)
 		#tweets_id.tweet.id
 			print(t2.text)
 			db.session.add(t1)
 		status_id = tweet.query.all()
 		for i in status_id:
-			time.sleep(t)
+			#time.sleep(t)
 			try:
 				api.update_status(status=request.form['reply'], in_reply_to_status_id= i.tweets_id, auto_populate_reply_metadata=True)
 			except Exception as e:
@@ -422,7 +421,7 @@ def home():
 		fetch_author_id = tweet.query.all()
 		print(fetch_author_id)
 		for t3 in fetch_author_id:
-			time.sleep(t)
+			#time.sleep(t)
 			try:
 				abc = api.create_friendship(t3.author_id)
 			except Exception as e:
@@ -435,7 +434,7 @@ def home():
 """
 		follower_idss = api.followers_ids()
 		for i in follower_idss:
-			time.sleep(t)
+			#time.sleep(t)
 			try:
 				print(api.send_direct_message(recipient_id=i,text=request.form['message1']))
 			except Exception as e:
